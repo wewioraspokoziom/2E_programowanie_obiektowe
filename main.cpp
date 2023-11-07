@@ -1,49 +1,62 @@
+﻿#include <iostream>
+#include <cstdlib>
+#include <time.h>
+#include <stdio.h>
 
-#include <iostream>
 
 using namespace std;
 
 int main()
 {
-    int liczba, liczba1, liczba2, znak;
-    cout << "Podaj 1 liczbe " << endl;
-    cin >> liczba1;
-    cout << "Podaj 2 liczbe" << endl;
-    cin >> liczba2;
-    cout << "Wybierz jakie dzialanie chcesz zrobic: " << endl;
-    cout << "1 - dodawanie" << endl;
-    cout << "2 - odejmowanie" << endl;
-    cout << "3 - mnozenie" << endl;
-    cout << "4 - dzielenie" << endl;
-    cin >> znak; 
-    
-    if(znak == 1)
+    int liczba;
+    string typ;
+    string wybor, k, n, p;
+
+
+    for (;;)
     {
-        liczba = liczba1 + liczba2;
+
+
+        cout << "Wybierz umiejetnosc: " << endl;
+        cout << "1 - nozyczki " << endl;
+        cout << "2 - papier " << endl;
+        cout << "3 - kamien " << endl;
+        cout << "4 - jaszczurka " << endl;
+        cout << "5 - spock " << endl;
+        cin >> wybor;
+        srand(time(NULL));
+        liczba = rand() % 5 + 1;
         cout << liczba << endl;
-    }
-    else if(znak == 2)
-    {
-        liczba = liczba1 - liczba2;
-        cout << liczba << endl;
-    }
-    else if(znak == 3)
-    {
-        liczba = liczba1 * liczba2;
-        cout << liczba << endl;
-    }
-    else if(znak == 4)
-    {
-        liczba = liczba1 / liczba2;
-        cout << liczba << endl;
-    }
-    else if(znak == 0)
-    {
-        exit;
-    }
-    else 
-    {
-        cout << "błędna cyfra" << endl;
+
+        switch (liczba)
+        {
+        case 1: typ = "1"; break;
+        case 2: typ = "2"; break;
+        case 3: typ = "3"; break;
+        case 4: typ = "1"; break;
+        case 5: typ = "2"; break;
+
+        }
+
+
+        if (wybor == typ)
+        {
+            cout << "Remis. Jeszcze raz: " << endl;
+        }
+        if (((wybor == "1") && (typ == "2")) || ((wybor == "1") && (typ == "4")) || ((wybor == "2") && (typ == "3")) || ((wybor == "2") && (typ == "4")) || ((wybor == "3") && (typ == "1")) || ((wybor == "3") && (typ == "5")) || ((wybor == "4") && (typ == "2")) || ((wybor == "4") && (typ == "3")) || ((wybor == "5") && (typ == "1")) || ((wybor == "5") && (typ == "2")))
+        {
+            cout << "Wygrales!" << endl;
+            cout << "Liczba wylosowana: " << typ << endl;
+            cout << "Twoja umiejetnosc :" << wybor << endl;
+        }
+        else
+        {
+            cout << "Przegrales" << endl;
+            cout << "Liczba wylosowana: " << typ << endl;
+            cout << "Twoja umiejetnosc: " << wybor << endl;
+        }
+
+
     }
     return 0;
 }
