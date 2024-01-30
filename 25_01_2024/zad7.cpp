@@ -24,10 +24,10 @@ int main()
 }
 void Obwodko(double promien, double &obwod){
 
-	2 * 3.14 * promien;
+	obwod = 2 * 3.14 * promien;
 }
 
 void Poleko(double promien, double &pole){
 
-	promien * promien * 3.14;
+	pole = promien * promien * 3.14;
 }
