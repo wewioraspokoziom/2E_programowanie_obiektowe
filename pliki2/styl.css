@@ -1,0 +1,100 @@
+#container
+{
+font-family: Garamond;
+}
+
+#baner
+{
+    background-color: tomato;
+    color: white;
+    text-align: center;
+    width: 80%;
+    height: 80px;
+}
+
+#blok
+{
+    width: 80%;
+    height: 600px;
+}
+
+#boczny
+{
+    background-color: coral;
+    width: 20%;
+    height: 680px;
+    float: right;
+    
+}
+
+#stopka
+{
+    background-color: tomato;
+    color: white;
+    text-align: center;
+}
+
+img
+{
+    border-radius: 50%;
+    padding: 10px;
+    padding: 10px;
+}
+
+.chat
+{
+    border-width: 1px;
+    border-color: tomato;
+    margin:15px;
+    height: 470px;
+    overflow: scroll;
+
+}
+
+.wjolanta
+{
+    border-radius: 5px;
+    width: 90%;
+    height: 70px;
+    margin: 2%;
+    padding: 3px;
+    background-color: #EEE;
+    float: left;
+}
+
+.wkrzysztofa
+{
+    border-radius: 5px;
+    width: 90%;
+    height: 70px;
+    margin: 2%;
+    padding: 3px;
+    background-color: #861c1c;
+    text-align: right;
+    
+}
+
+#jolantazdj
+{
+    float: left;
+}
+
+#krzysztofzdj
+{
+    float: right;
+}
+
+button
+{
+    background-color: tomato;
+    border: solid;
+    border-width: 1px;
+    border-color: DarkRed;
+    padding: 5px;
+    font-weight: Bold;
+}
+
+input
+{
+    width: 500px;
+}
